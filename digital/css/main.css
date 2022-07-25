@@ -31,3 +31,14 @@ html, body, iframe {
 #sketchFrame3.iframeThird{
   left: 972px;
 }
+
+#debug{
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 1000;
+  color: white;
+  background-color: black;
+  padding: 20px;
+}

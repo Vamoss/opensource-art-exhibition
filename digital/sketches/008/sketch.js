@@ -12,11 +12,11 @@ http://github.com/vamoss
 var colors 
 
 var dots = [];
-var centerX;
+var centerX, centerY;
 const modulo = 30;
 
 function setup() {
-  createCanvas(600, 600); 
+  createCanvas(windowWidth, windowHeight); 
   frameRate(30);
   background(255);
   noStroke();
@@ -25,6 +25,7 @@ function setup() {
   colors = colors.map(c => c = color(c));
 	
   centerX = width/2;
+  centerY = height/2;
   
   for(var i=0; i<300; i++){
     dots.push(new Dot());
@@ -84,7 +85,7 @@ class Dot
      this.curSize+=(this.size-this.curSize)*0.01;
    }
    this.pos.x = cos((this.index+frameCount/this.velocity)/modulo*TWO_PI)*this.radius+centerX;
-   this.pos.y = sin((this.index+frameCount/this.velocity)/modulo*TWO_PI)*this.radius+centerX; 
+   this.pos.y = sin((this.index+frameCount/this.velocity)/modulo*TWO_PI)*this.radius+centerY; 
   }
   
   draw(){

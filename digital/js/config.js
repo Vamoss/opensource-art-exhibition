@@ -1,6 +1,15 @@
 const changeDuration = 5;
 const sketches = [
     [
+        "012",
+        "011",
+        "012",
+    ]
+];
+/*
+const changeDuration = 5;
+const sketches = [
+    [
         "001",
         "002",
         "003"    
@@ -21,3 +30,4 @@ const sketches = [
         "012",
     ]
 ];
+*/

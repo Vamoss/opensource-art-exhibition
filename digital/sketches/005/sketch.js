@@ -12,7 +12,7 @@ http://github.com/vamoss
 var circles = []
 
 function setup() {
-	createCanvas(800, 800);
+	createCanvas(windowWidth, windowHeight);
 	background(255);
 }
 
@@ -69,7 +69,8 @@ function draw() {
 			circles.splice(i, 1);
 		}
 	}
-	          
+
+	strokeWeight(5);
 	fill(255, 255,255);                
 	ellipse(width/2, height/2, 200, 200);
 }

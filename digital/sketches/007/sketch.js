@@ -12,8 +12,9 @@ http://github.com/vamoss
 var colors;
 
 function setup() {
-  createCanvas(600, 600); 
+  createCanvas(windowWidth, windowHeight); 
   background(0);
+  frameRate(5);
 	
 	colors = [
 		color(0, 67, 88),
@@ -25,7 +26,7 @@ function setup() {
 } 
 
 function draw() {
-  radius = random(width/2-20);
+  radius = random(width/2-100);
   
   //random select a color
   var col = random(colors);

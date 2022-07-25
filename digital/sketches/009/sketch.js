@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-	const MAX_RADIUS = min(width, height) / 2;
+	const MAX_RADIUS = min(width, height) / 2 - 100;
 	for(let i = 0; i < 200; i++){
 		let prevX = cos(angle) * radius + width / 2;
 		let prevY = sin(angle) * radius + height / 2;

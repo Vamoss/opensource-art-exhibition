@@ -12,13 +12,15 @@ http://github.com/vamoss
 var centerX, centerY;
 
 const amplitude = 10;
+var totalAnswers, answerHeight;
 
-const totalAnswers = 5;
-const answerHeight = 100;
 var answers = [];
 
 function setup(){
-  createCanvas(800, totalAnswers*answerHeight); 
+  createCanvas(windowWidth, windowHeight); 
+
+  totalAnswers = floor(height/100);
+  answerHeight = height / totalAnswers;
 
   centerX = width/2;
   centerY = answerHeight/2;

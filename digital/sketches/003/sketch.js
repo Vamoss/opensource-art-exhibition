@@ -30,8 +30,7 @@ function preload() {
 }
 
 function setup() {
-	var size = min(windowWidth, windowHeight)*0.9;
-	createCanvas(size, size);
+	createCanvas(windowWidth, windowHeight);
 	background("#2B2244");
 	
 	colors = [color("#900C3F"), color("#C70039"), color("#e32c36"), color("#FF5733"), color("#FFC30F"), color("#24fffb")];
@@ -87,7 +86,7 @@ function draw() {
 	
 	noStroke();
 	fill(255, fadeIn < 255 ? ++fadeIn : fadeIn);
-  text(message, 20, textY);
+  text(message, 50, textY);
 }
 
 // wraps text to a specified width (will flow to any height necessary to fit
