@@ -1,0 +1,33 @@
+html, body, iframe {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#simulator{
+  background-color: #000;
+}
+.iframeThird{
+  background-color: #FFF;
+  width: 1080px;
+  height: 1920px;
+  float: left;
+  border: 1px solid;
+  zoom: 1;
+  -moz-transform: scale(0.45);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.45);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.45);
+  -webkit-transform-origin: 0 0;
+  position: absolute;
+  top: 0px;
+}
+#sketchFrame2.iframeThird{
+  left: 486px;
+}
+#sketchFrame3.iframeThird{
+  left: 972px;
+}
