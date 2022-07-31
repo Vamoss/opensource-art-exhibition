@@ -38,6 +38,7 @@ function preload() {
 
 function setup() {
 	var size = min(windowWidth, windowHeight);
+	if(size == 0) return;
 	createCanvas(size, size);
 	zoom = size / 860;
 	
