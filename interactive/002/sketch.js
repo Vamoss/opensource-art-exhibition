@@ -2,8 +2,7 @@ var blocos = []
 var modo = 0
 
 function setup() {
-  //createCanvas(windowWidth/2, windowHeight)
-  createCanvas(1080, 1920)
+  createCanvas(windowWidth, windowHeight)
   background(0)
   noStroke()
   inicia()

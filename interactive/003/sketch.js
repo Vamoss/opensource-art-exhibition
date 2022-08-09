@@ -11,7 +11,7 @@ var raio = 5
 var angulo = 0
 
 function setup() {
-	createCanvas(1080, 1920)
+	createCanvas(windowWidth, windowHeight)
 	background(0)
 	strokeWeight(2)
 	
