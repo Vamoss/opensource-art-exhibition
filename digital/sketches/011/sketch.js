@@ -35,7 +35,7 @@ function setup() {
       const maxColor = 255 * 3;
       let intensity = (r + g + b) / maxColor;
       cachedBrightness.push(intensity);
-      x += precision / (intensity + 0.01) / 20;
+      x += precision / (intensity + 0.01) / 2.5;
     }
   }
 } 
@@ -57,9 +57,9 @@ function draw() {
     while (x < img.width) {
       let intensity = cachedBrightness[i];
       i++;
-      phase += 0.1;
+      phase += 0.8;
       vertex(x, y + sin(phase - time) * vSpace / 2);
-      x += precision / (intensity + 0.01) / 20;
+      x += precision / (intensity + 0.01) / 2.5;
     }
     endShape();
   }
