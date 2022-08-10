@@ -11,6 +11,12 @@ var id = urlParams.get('id');
 if(!id)
     id = 0;
 
+var offset = urlParams.get('offset');
+if(!offset)
+    offset = 0;
+else
+    offset = parseInt(offset)
+
 
 const transitionSpeed = 1200;
 
@@ -23,7 +29,7 @@ var qrcode = new QRCode("qrcode", {
 var current = -1;
 var sync = new Sync();
 sync.addEventListener("on_1s_tick", function(e){
-    var counter = Math.floor(Math.floor(e.detail.millis/1000)/changeDuration)%sketches.length;
+    var counter = Math.floor(Math.floor(e.detail.millis/1000+offset)/changeDuration)%sketches.length;
     if(counter != current){
         current = counter;
         overlayEl.classList.add("active");
