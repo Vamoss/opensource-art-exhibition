@@ -15,6 +15,10 @@
   src: url('../fonts/SourceCodePro-Regular.ttf');
 }
 
+* {
+  cursor: none;
+  }
+
 html, body, iframe {
   margin: 0px;
   padding: 0px;
