@@ -1,5 +1,3 @@
-const DEBUG = false;
-
 const sketchFrame = document.getElementById("sketchFrame");
 const overlayEl = document.getElementById("overlay");
 const metaEl = document.getElementById("meta");
@@ -16,6 +14,12 @@ if(!offset)
     offset = 0;
 else
     offset = parseInt(offset)
+
+var DEBUG = urlParams.get('debug');
+if(!DEBUG)
+    DEBUG = false;
+else
+    DEBUG = DEBUG == 'true';
 
 
 const transitionSpeed = 1200;
@@ -41,7 +45,7 @@ sync.addEventListener("on_1s_tick", function(e){
             var title = sketchInfo.title;
             var message = "Arte gerativa<br/>"+sketchInfo.year;
             if(DEBUG)
-                message += "<br/>Sketch " + current + ", Display: " + id;
+                message += "<br/>Sketch " + current + ", Display: " + id + ", Offset: " + offset + ", Counter: " + counter;
 
             showMeta(title, message);
 
@@ -56,6 +60,9 @@ sync.addEventListener("on_1s_tick", function(e){
 
             overlayEl.classList.remove("active");
         }, transitionSpeed);        
+    }
+    if(DEBUG){
+        progressEl.innerHTML = changeDuration - Math.floor((e.detail.millis/1000+offset)%changeDuration);
     }
 });
 sync.start();
