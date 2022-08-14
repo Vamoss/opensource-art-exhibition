@@ -43,14 +43,16 @@ iframe {
 #meta h1{
   font-family: 'SourceCodePro-Bold';
   font-size: 40px;
+  max-width: 76%;
+  margin-bottom: 5px;
 }
 
 #qrcode {
   position: absolute;
   bottom: 2%;
-  right: 1%;
+  right: 3%;
   z-index: 1500;
-  padding: 30px;
+  padding: 15px;
   background-color: white;
 }
 

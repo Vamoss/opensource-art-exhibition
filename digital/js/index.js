@@ -1,4 +1,4 @@
-const DEBUG = true;
+const DEBUG = false;
 
 const sketchFrame = document.getElementById("sketchFrame");
 const overlayEl = document.getElementById("overlay");
